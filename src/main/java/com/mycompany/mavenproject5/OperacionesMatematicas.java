@@ -1,14 +1,14 @@
-import java.security.SecureRandom;
+import java.util.Random;
 
 public class OperacionesMatematicas {
     int nivelDificultad;
     int tipoProblema;
-    SecureRandom generador;
+    Random generador;
 
     public OperacionesMatematicas(int nivelDificultad, int tipoProblema) {
         this.nivelDificultad = nivelDificultad;
         this.tipoProblema = tipoProblema;
-        this.generador = new SecureRandom();
+        this.generador = new Random();
     }
 
     public int[] generarOperandos() {
@@ -30,9 +30,5 @@ public class OperacionesMatematicas {
     public int calcularRespuesta(int numero1, int numero2) {
         if (tipoProblema == 1) return numero1 + numero2;
         else if (tipoProblema == 2) return numero1 - numero2;
-        else if (tipoProblema == 3) return numero1 * numero2;
-        else if (tipoProblema == 4) return numero1 / numero2;
-        else return 0;
-    }
-}
+        else if
 
