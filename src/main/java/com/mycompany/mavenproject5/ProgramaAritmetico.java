@@ -16,7 +16,7 @@ public class ProgramaAritmetico {
         int aciertos = 0;
         int intentos = 0;
 
-        while (intentos < 10) {
+        while (aciertos < 10) {
             int[] operandos = operacionesMatematicas.generarOperandos();
             String pregunta = operacionesMatematicas.generarPregunta(operandos[0], operandos[1]);
 
