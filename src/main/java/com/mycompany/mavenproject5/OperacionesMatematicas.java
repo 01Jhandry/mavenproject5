@@ -18,24 +18,20 @@ public class OperacionesMatematicas {
         return new int[]{numero1, numero2};
     }
 
-    public int generarTipoAleatorio() {
-        return generador.nextInt(4) + 1;
-    }
-
-    public String generarPregunta(int numero1, int numero2, int tipoPregunta) {
+    public String generarPregunta(int numero1, int numero2) {
         String signo = "";
-        if (tipoPregunta == 1) signo = " + ";
-        else if (tipoPregunta == 2) signo = " - ";
-        else if (tipoPregunta == 3) signo = " x ";
-        else if (tipoPregunta == 4) signo = " / ";
+        if (tipoProblema == 1) signo = " + ";
+        else if (tipoProblema == 2) signo = " - ";
+        else if (tipoProblema == 3) signo = " x ";
+        else if (tipoProblema == 4) signo = " / ";
         return "¿Cuánto es " + numero1 + signo + numero2 + "?";
     }
 
-    public int calcularRespuesta(int numero1, int numero2, int tipoPregunta) {
-        if (tipoPregunta == 1) return numero1 + numero2;
-        else if (tipoPregunta == 2) return numero1 - numero2;
-        else if (tipoPregunta == 3) return numero1 * numero2;
-        else if (tipoPregunta == 4) return numero1 / numero2;
+    public int calcularRespuesta(int numero1, int numero2) {
+        if (tipoProblema == 1) return numero1 + numero2;
+        else if (tipoProblema == 2) return numero1 - numero2;
+        else if (tipoProblema == 3) return numero1 * numero2;
+        else if (tipoProblema == 4) return numero1 / numero2;
         else return 0;
     }
 }
